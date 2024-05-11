@@ -1,5 +1,3 @@
-import pytest
-
 from praktikum.burger import Burger
 from unittest.mock import Mock
 

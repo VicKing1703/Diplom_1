@@ -19,9 +19,15 @@ class TestDatabase:
         bun_mock3.get_price.return_value = 300
 
         db = Database()
-        db.buns = [bun_mock1, bun_mock2, bun_mock3]
+        db.buns = [bun_mock1,
+                   bun_mock2,
+                   bun_mock3
+                   ]
 
-        assert db.available_buns() == [bun_mock1, bun_mock2, bun_mock3]
+        assert db.available_buns() == [bun_mock1,
+                                       bun_mock2,
+                                       bun_mock3
+                                       ]
 
     def test_available_ingredients(self):
 
@@ -56,12 +62,22 @@ class TestDatabase:
         ingredient_mock6.get_price.return_value = 300
 
         exp_ingredients = [
-            ingredient_mock1, ingredient_mock2, ingredient_mock3, ingredient_mock4, ingredient_mock5, ingredient_mock6
+            ingredient_mock1,
+            ingredient_mock2,
+            ingredient_mock3,
+            ingredient_mock4,
+            ingredient_mock5,
+            ingredient_mock6
         ]
 
         db = Database()
         db.ingredients = [
-            ingredient_mock1, ingredient_mock2, ingredient_mock3, ingredient_mock4, ingredient_mock5, ingredient_mock6
+            ingredient_mock1,
+            ingredient_mock2,
+            ingredient_mock3,
+            ingredient_mock4,
+            ingredient_mock5,
+            ingredient_mock6
         ]
 
         assert db.available_ingredients() == exp_ingredients
